@@ -1,3 +1,5 @@
+import 'package:coffee_shop/widgets/montly_coffee_widget.dart';
+import 'package:coffee_shop/widgets/product_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -144,56 +146,8 @@ class HomePage extends StatelessWidget {
                           Image.asset("assets/filter.png"),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 50, bottom: 30),
-                        child: Stack(
-                          clipBehavior: Clip.none,
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(12),
-                              width: double.infinity,
-                              height: 120,
-                              decoration: const BoxDecoration(
-                                  color: Color(0xffF5F0E6),
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(30))),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Text(
-                                    "Monthly\nCoffee",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 22),
-                                  ),
-                                  const Spacer(),
-                                  Row(
-                                    children: const [
-                                      Text(
-                                        "\$12.9",
-                                        style: TextStyle(
-                                          color: Color(0xffE4886C),
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 22,
-                                        ),
-                                      ),
-                                      Text(
-                                        "/month",
-                                        style: TextStyle(color: Colors.grey),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Positioned(
-                              right: 0,
-                              top: -25,
-                              child: Image.asset("assets/box.png"),
-                            ),
-                          ],
-                        ),
-                      ),
+                      const MonthlyCoffeeWidget(),
+                      const ProductWidget(),
                     ],
                   ),
                 ),
