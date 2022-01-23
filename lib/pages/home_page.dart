@@ -1,3 +1,4 @@
+import 'package:coffee_shop/pages/details_page.dart';
 import 'package:coffee_shop/widgets/montly_coffee_widget.dart';
 import 'package:coffee_shop/widgets/product_widget.dart';
 import 'package:flutter/material.dart';
@@ -147,7 +148,40 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                       const MonthlyCoffeeWidget(),
-                      const ProductWidget(),
+                      const ProductWidget(
+                        price: "5.2",
+                        country: "Lembank",
+                        name: "Pine Blend",
+                        shape: "assets/shapes1.png",
+                        heroTag: "pine",
+                        productImage: "assets/pocket 1.png",
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const DetailsPage(),
+                            ),
+                          );
+                        },
+                        child: const ProductWidget(
+                          price: "6.8",
+                          country: "Indonesia",
+                          name: "Kapal Air",
+                          shape: "assets/shapes2.png",
+                          heroTag: "kapal",
+                          productImage: "assets/pocket 2.png",
+                        ),
+                      ),
+                      const ProductWidget(
+                        price: "5.7",
+                        country: "Japan",
+                        name: "JCO Orginal",
+                        shape: "assets/shapes3.png",
+                        heroTag: "ico",
+                        productImage: "assets/pocket 3.png",
+                      ),
                     ],
                   ),
                 ),

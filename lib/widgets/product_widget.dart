@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
 class ProductWidget extends StatelessWidget {
-  final String? productImage;
-  final String? country;
-  final String? name;
-  final String? shape;
-  final String? price;
+  final String productImage;
+  final String country;
+  final String name;
+  final String shape;
+  final String price;
+  final String heroTag;
 
   const ProductWidget(
       {Key? key,
-      this.productImage,
-      this.country,
-      this.name,
-      this.shape,
-      this.price})
+      required this.productImage,
+      required this.country,
+      required this.name,
+      required this.shape,
+      required this.price,
+      required this.heroTag})
       : super(key: key);
 
   @override
@@ -34,24 +36,26 @@ class ProductWidget extends StatelessWidget {
             ),
             child: Row(
               children: [
-                const Image(image: AssetImage("assets/shapes1.png")),
+                Image(
+                  image: AssetImage(shape),
+                ),
                 const SizedBox(width: 50),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 12),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text("Lembank"),
-                      SizedBox(height: 8),
+                    children: [
+                      Text(country),
+                      const SizedBox(height: 8),
                       Text(
-                        "Pine Blend",
-                        style: TextStyle(
+                        name,
+                        style: const TextStyle(
                             fontSize: 19, fontWeight: FontWeight.bold),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Text(
-                        "\$5.2",
-                        style: TextStyle(
+                        "\$$price",
+                        style: const TextStyle(
                           color: Color(0xffE4886C),
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
@@ -75,8 +79,8 @@ class ProductWidget extends StatelessWidget {
           ),
           Positioned(
             child: Hero(
-              tag: "pine",
-              child: Image.asset("assets/pocket 1.png"),
+              tag: heroTag,
+              child: Image.asset(productImage),
             ),
             left: 20,
             top: -25,
