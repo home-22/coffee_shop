@@ -27,6 +27,7 @@ class HomePage extends StatelessWidget {
                     color: const Color(0xffF5C168),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: const [
                         Text(
                           "Ngo",
@@ -131,6 +132,7 @@ class HomePage extends StatelessWidget {
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
