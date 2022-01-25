@@ -27,21 +27,21 @@ class ProductWidget extends StatelessWidget {
         children: [
           Container(
             width: double.infinity,
-            height: 120,
+            height: 160,
             decoration: const BoxDecoration(
               color: Color(0xffF5F0E6),
               borderRadius: BorderRadius.only(
-                topRight: Radius.circular(30),
+                topRight: Radius.circular(50),
               ),
             ),
-            child: Row(
+            child: Stack(
               children: [
                 Image(
                   image: AssetImage(shape),
                 ),
                 const SizedBox(width: 50),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -50,14 +50,14 @@ class ProductWidget extends StatelessWidget {
                       Text(
                         name,
                         style: const TextStyle(
-                            fontSize: 19, fontWeight: FontWeight.bold),
+                            fontSize: 21, fontWeight: FontWeight.bold),
                       ),
                       const Spacer(),
                       Text(
                         "\$$price",
                         style: const TextStyle(
-                          color: Color(0xffE4886C),
-                          fontSize: 22,
+                          color: Colors.black,
+                          fontSize: 29,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -73,7 +73,7 @@ class ProductWidget extends StatelessWidget {
             bottom: 0,
           ),
           const Positioned(
-            child: Icon(Icons.add, color: Colors.white),
+            child: Icon(Icons.add, color: Colors.pink),
             right: 5,
             bottom: 5,
           ),
@@ -82,8 +82,8 @@ class ProductWidget extends StatelessWidget {
               tag: heroTag,
               child: Image.asset(productImage),
             ),
-            left: 20,
-            top: -25,
+            left: 105,
+            top: -10,
           ),
         ],
       ),

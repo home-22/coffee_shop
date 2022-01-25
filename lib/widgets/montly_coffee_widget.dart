@@ -13,7 +13,7 @@ class MonthlyCoffeeWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(12),
             width: double.infinity,
-            height: 120,
+            height: 150,
             decoration: const BoxDecoration(
                 color: Color(0xffF5F0E6),
                 borderRadius: BorderRadius.only(topRight: Radius.circular(30))),

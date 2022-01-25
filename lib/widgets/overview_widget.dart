@@ -16,8 +16,8 @@ class OverviewWidget extends StatelessWidget {
     return Row(
       children: [
         Container(
-          height: 40,
-          width: 40,
+          height: 43,
+          width: 43,
           decoration: BoxDecoration(
             color: const Color(0xffFFF4E1),
             borderRadius: BorderRadius.circular(12),

@@ -68,7 +68,7 @@ class HomePage extends StatelessWidget {
                           alignment: Alignment.centerRight,
                           child: Container(
                             width: 5,
-                            height: 30,
+                            height: 50,
                             decoration: const BoxDecoration(
                               color: Color(0xffF5C168),
                               borderRadius: BorderRadius.only(
@@ -129,7 +129,7 @@ class HomePage extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Container(
                   margin:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+                      const EdgeInsets.symmetric(horizontal: 3, vertical: 40),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -140,7 +140,7 @@ class HomePage extends StatelessWidget {
                             "Coffee",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 30,
+                              fontSize: 35,
                             ),
                           ),
                           const Spacer(),

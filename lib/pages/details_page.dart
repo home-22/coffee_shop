@@ -11,18 +11,19 @@ class DetailsPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
+          clipBehavior: Clip.none,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
                 width: MediaQuery.of(context).size.width,
-                height: 424,
+                height: 399,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       width: 310,
-                      height: 424,
+                      height: 399,
                       decoration: const BoxDecoration(
                         color: Color(0xffF5F0E6),
                         image: DecorationImage(
@@ -33,17 +34,18 @@ class DetailsPage extends StatelessWidget {
                         clipBehavior: Clip.none,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(40, 60, 0, 0),
+                            padding: const EdgeInsets.fromLTRB(10, 10, 0, 0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 GestureDetector(
-                                    onTap: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: const Icon(
-                                        Icons.arrow_back_ios_rounded,
-                                        size: 20)),
+                                  onTap: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: const Icon(
+                                      Icons.arrow_back_ios_rounded,
+                                      size: 30),
+                                ),
                                 const SizedBox(height: 20),
                                 const Text(
                                   "Indonesia",
@@ -53,25 +55,26 @@ class DetailsPage extends StatelessWidget {
                                 const Text(
                                   "Kapal Air",
                                   style: TextStyle(
-                                      fontSize: 35,
+                                      fontSize: 30,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                const SizedBox(height: 15),
+                                const SizedBox(height: 25),
                                 Container(
-                                  padding: const EdgeInsets.all(8),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 25, vertical: 10),
                                   decoration: BoxDecoration(
                                       color: const Color(0xffF5C168),
-                                      borderRadius: BorderRadius.circular(5)),
+                                      borderRadius: BorderRadius.circular(25)),
                                   child: const Text(
                                     "Robusta Gold",
                                     style: TextStyle(color: Colors.white),
                                   ),
                                 ),
-                                const SizedBox(height: 25),
+                                const SizedBox(height: 35),
                                 const Text(
                                   "\$6.5",
                                   style: TextStyle(
-                                      fontSize: 25,
+                                      fontSize: 35,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ],
@@ -84,14 +87,14 @@ class DetailsPage extends StatelessWidget {
                                   "assets/pocket-kapal.png",
                                 )),
                             bottom: -70,
-                            right: -90,
+                            right: -30,
                           ),
                           Positioned(
                             child: Container(
                               padding: const EdgeInsets.symmetric(
-                                  horizontal: 30, vertical: 20),
+                                  horizontal: 20, vertical: 20),
                               decoration: BoxDecoration(
-                                  color: const Color(0xffEC5E4F),
+                                  color: Colors.blue,
                                   borderRadius: BorderRadius.circular(15)),
                               child: Row(
                                 children: [
@@ -100,16 +103,16 @@ class DetailsPage extends StatelessWidget {
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 15,
+                                      fontSize: 20,
                                     ),
                                   ),
-                                  const SizedBox(width: 15),
+                                  const SizedBox(width: 25),
                                   Image.asset("assets/add-to-cart.png"),
                                 ],
                               ),
                             ),
-                            bottom: -30,
-                            left: 40,
+                            bottom: -20,
+                            right: 180,
                           ),
                         ],
                       ),
@@ -117,15 +120,8 @@ class DetailsPage extends StatelessWidget {
                     SizedBox(
                       width: MediaQuery.of(context).size.width - 310,
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 50),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: const [
-                            Icon(Icons.share_outlined),
-                            SizedBox(height: 40),
-                            Icon(Icons.favorite_border_rounded),
-                          ],
-                        ),
+                        padding: const EdgeInsets.only(),
+                        child: Row(),
                       ),
                     ),
                   ],
@@ -133,12 +129,11 @@ class DetailsPage extends StatelessWidget {
               ),
               const SizedBox(height: 40),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 40, vertical: 50),
+                padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 0),
                 child: Column(
                   children: [
                     const TitleWidget(title: "Overview"),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 50),
                     Row(
                       children: const [
                         OverviewWidget(
@@ -146,7 +141,7 @@ class DetailsPage extends StatelessWidget {
                           subtitle: "Altitude",
                           imagePath: "assets/subject1.png",
                         ),
-                        SizedBox(width: 30),
+                        SizedBox(width: 20),
                         OverviewWidget(
                           title: "Washed",
                           subtitle: "Processing",
@@ -162,7 +157,7 @@ class DetailsPage extends StatelessWidget {
                           subtitle: "Location",
                           imagePath: "assets/subject3.png",
                         ),
-                        SizedBox(width: 30),
+                        SizedBox(width: 20),
                         OverviewWidget(
                           title: "SLN9",
                           subtitle: "Varietal",
@@ -170,7 +165,7 @@ class DetailsPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 40),
+                    const SizedBox(height: 50),
                     const TitleWidget(title: "Description"),
                     const SizedBox(height: 20),
                     const Text(
